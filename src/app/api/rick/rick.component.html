@@ -1,0 +1,28 @@
+<p>
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <span>{{character.name}}</span>
+        <span class="example-spacer"></span>
+    </mat-toolbar>
+</p>
+
+<mat-grid-list cols="4" rowHeight="600px">
+    <mat-grid-tile>
+        <mat-card class="example-card">
+            <img mat-card-image [src]="character.image" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <h2>{{character.species}}</h2>
+                <h3>{{character.name}}</h3>
+                <p>{{character.gender}}</p>
+                <p>{{character.origin?.name}}</p>
+                <p>{{character.location?.name}}</p>
+                <p>{{character.status}}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" routerLink="/">Regresar</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

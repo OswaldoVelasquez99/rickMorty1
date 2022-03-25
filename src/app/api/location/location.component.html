@@ -1,0 +1,27 @@
+<p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <span>Location</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon routerLink="/location">room</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon routerLink="/episodes">event_seat</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+  
+      <mat-grid-list cols="4" rowHeight="200px">
+        <mat-grid-tile *ngFor="let location of locations">
+          <mat-card class="example-card">
+            <mat-card-content>
+              <h2>{{location.name}}</h2>
+                    <h3>{{location.type}}</h3>
+                    <p>{{location.dimension}}</p>
+            </mat-card-content>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
